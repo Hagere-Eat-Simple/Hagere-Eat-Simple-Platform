@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="nn.js"></script>
+    <title>HAGERE EAT SIMPLE ONLINE FOOD ORDERING SYSTEM</title>
+
+     
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/menu/style.css">
+    <link rel="stylesheet" href="../css/menu/cart1.css">
+
+</head>
+<body>
+    
+<!-- header section starts      -->
+
+<div>
+        <header id="navigation" >
+        <a href="index.html" class="logo">  Hagere Eat Simple</a>
+        
+            <nav class="navbar">
+                <a href="../../../Project/index.html">Home</a>
+                <a href="resources/html/br.html">Browse</a>
+
+            </nav>
+        
+             <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <a href="#" class="fas fa-shopping-cart" id="cart" onclick="openModel()"></a>
+                <label for="check">
+                <i class="fas fa-user" id="sidebar_btn" onclick="func()"></i>
+            </label>
+            </div> 
+</header>
+<!--profile part-->
+
+<div class="sidebar" id="sidebar">
+ 
+    <h4 id="profile1">Username:  </h4>
+    <h4 id="profile2">Name: </h4>
+    <h4 id="profile3">Email: </h4>
+    <h4 id="profile4">Phone: </h4>
+</form>
+<br><br>
+<details id="details">
+    <summary id="sum">Tokens</summary>
+    <div id=amount>
+    Amount: 2500 Tokens
+    </div> 
+    Expiration Date: 12/06/2022 <br>
+    <a href="about_us.html#buy">Where to buy tokens.</a>
+</details>
+<br><br>
+<div>
+<a onclick="logout();"><i class="fas fa-desktop"></i><span>Log Out</span></a>
+<a href="resources/html/settingsp.html"><i class="fas fa-info-circle"></i><SPan>Settings</SPan></a></div>
+
+</div> 
+<!--profile end-->
+<!-- dishes section starts  -->
+
+<section class="dishes" id="dishes">
+
+    <h3 class="sub-heading"> Menu </h3>
+    <h1 class="heading" id="glow">Available foods</h1>
+    <div class="box-container"> 
+
+        <div>
+            <summary  id="glow1"><b>Breakfast Menu</b></summary>
+        <div class="pos" id="pos">
+            <div class="box">
+                <img class = "food-image" src="../images/photos/banana-bread.jfif" alt=""><!--class-->
+                <h3 class="food-title" id="f1">banana-bread</h3><!--class-->
+                
+                <div class="shop-item-details">                   <!--   start div-->
+                    <span class="food-price">30birr</span>    <!--class -->
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div>     <!-- end div-->
+            </div>       
+        <div class="box">
+            <img class = "food-image"  src="../images/photos/frencht.jfif" alt="">
+            
+            <h3 class="food-title"id="f2">french toast</h3>
+            <div class="shop-item-details">
+                <span class="food-price">60 birr</span>
+            <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image"  src="../images/photos/oatmeal.jfif" alt="">
+            
+            <h3 class="food-title" id="f3">Oatmeal</h3>
+            <div class="shop-item-details">
+                <span class="food-price">90 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div>  
+ 
+        <div class="box">
+            <img class = "food-image"   src="../images/photos/muffin.jfif" alt="">
+            
+            <h3 class="food-title" id="f4">muffin</h3>
+            <div class="shop-item-details">
+                <span class="food-price">50 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image" src="../images/photos/pancake.jfif" alt="">
+            
+            <h3 class="food-title" id="f5">pancakes</h3>
+            <div class="shop-item-details">
+                <span class="food-price">60 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image" src="../images/photos/sandwich.jfif" alt="">
+            
+            <h3 class="food-title" id="f6">sandwich</h3>
+            <div class="shop-item-details">
+                <span class="food-price">30 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image" src="../images/photos/scrambled-eggs.jpg" alt="">
+            
+            <h3 class="food-title" id="f7">scrambled-eggs</h3>
+            <div class="shop-item-details">
+                <span class="food-price">30 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+
+        <div class="box">
+            <img class = "food-image" src="../images/photos/omelet.jpg" alt="">
+           
+            <h3 class="food-title" id="f71">omelette</h3>
+            <div class="shop-item-details">
+                <span class="food-price">50 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image" src="../images/photos/ham and chess.jpg" alt="">
+           
+            <h3 class="food-title" id="f72">Ham and cheese quiche</h3>
+            <div class="shop-item-details">
+                <span class="food-price">70 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image"  src="../images/photos/vegan yogurt.jpg" alt="">
+            
+            <h3 class="food-title" id="f73">Vegan yogurt with blueberries</h3>
+            <div class="shop-item-details">
+                <span class="food-price">30 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image"  src="../images/photos/monkey bread.jpg" alt="">
+            
+            <h3 class="food-title" id="f74">Monkey bread</h3>
+            <div class="shop-item-details">
+                <span class="food-price">90 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image" src="../images/photos/waffle with straw.jpg" alt="">
+            
+            <h3 class="food-title" id="f75">waffle with strwaberries</h3>
+            <div class="shop-item-details">
+                <span class="food-price">140 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image" src="../images/photos/pankake with maple.jpg" alt="">
+        
+            <h3 class="food-title" id="f76">Pancakes and Maple Syrup</h3>
+            <div class="shop-item-details">
+                <span class="food-price">120 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image" src="../images/photos/egg bendict.jpg" alt="">
+           
+            <h3 class="food-title" id="f77">egg bendict</h3>
+            <div class="shop-item-details">
+                <span class="food-price">80 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image" src="../images/photos/fritatta.jpg" alt="">
+            
+            <h3 class="food-title" id="f78">fritatta </h3>
+            <div class="shop-item-details">
+                <span class="food-price">76 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div>
+        
+        
+
+
+
+
+
+
+    </div>
+    <div>
+        <summary id="glow1"><b>Lunch Menu</b></summary>
+        <div class="pos1">
+        <div class="box">
+            <img class = "food-image"  src="../images/photos/waffles.jfif" alt="">
+            
+            <h3 class="food-title" id="f8">waffles</h3>
+            <div class="shop-item-details">
+                <span class="food-price">90 birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        
+        <div class="box">
+            <img class = "food-image"  src="../images/photos/beefb.jfif" alt="">
+           
+            <h3 class="food-title" id="f13">Beef burger</h3>
+            <div class="shop-item-details">
+                <span class="food-price">200birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image" src="../images/photos/bwf.jpg" alt="">
+           
+            <h3 class="food-title" id="f83">beef with frechfries</h3>
+            <div class="shop-item-details">
+                <span class="food-price">250birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+            </div>
+            <div class="box">
+                <img class = "food-image" src="../images/photos/cheeseb.jfif" alt="">
+                
+                <h3 class="food-title" id="f84">cheese burger</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">200birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div>
+            <div class="box">
+                <img class = "food-image" src="../images/photos/chickenb.jfif" alt="">
+               
+                <h3 class="food-title" id="f85">chicken burger</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">250birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div>
+            <div class="box">
+                <img class = "food-image" src="../images/photos/tunap.jfif" alt="">
+               
+               
+                <h3 class="food-title" id="f86">Tuna pizza</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">200birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/vegp.jfif" alt="">
+                
+                <h3 class="food-title" id="f87">veg pizza</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">230birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+
+
+
+
+
+
+            <div class="box">
+                <img class = "food-image" src="../images/photos/buben sandwich.jpg" alt="">
+                
+                <h3 class="food-title" id="f88">ruben sandwich</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">300birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/barbeque ribs.jpg" alt="">
+                
+                <h3 class="food-title" id="f89">barbecue ribs</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">310birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/the blt.jpg" alt="">
+              
+                <h3 class="food-title" id="f810">the blt</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">320birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/applepie.jpg" alt="">
+                
+                <h3 class="food-title" id="f811">apple pie</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">120birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            
+            <div class="box">
+                <img class = "food-image" src="../images/photos/pilly cheesestake.jpg" alt="">
+               
+                <h3 class="food-title" id="f812">pilly cheese steak</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">220birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/california roll.jpg" alt="">
+               
+                
+                <h3 class="food-title" id="f813">california roll</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">240birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/beef jerky.jpg" alt="">
+                
+                <h3 class="food-title" id="f814">beef jerky</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">270birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/chicken wings.jpg" alt="">
+             
+                <h3 class="food-title" id="f815">chicken wings</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">240birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div>
+        <summary id="glow1"><b>dinner menu</b></summary>
+        <div class="pos3">
+        <div class="box">
+            <img class = "food-image" src="../images/photos/meatloaf.jpg" alt="">
+           
+            <h3 class="food-title" id="f81">meat loaf</h3>
+            <div class="shop-item-details">
+                <span class="food-price">190birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        
+        <div class="box">
+            <img class = "food-image" src="../images/photos/macroni and cheese.jpg" alt="">
+           
+            <h3 class="food-title" id="f82">Macaroni and cheese</h3>
+            <div class="shop-item-details">
+                <span class="food-price">200birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image" src="../images/photos/fajitas.jpg" alt="">
+           
+            <h3 class="food-title" id="f83">Fajitas</h3>
+            <div class="shop-item-details">
+                <span class="food-price">230birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+            </div>
+            <div class="box">
+                <img class = "food-image" src="../images/photos/deep pizza.jpg" alt="">
+           
+                <h3 class="food-title" id="f84">deep dish pizza</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">270birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div>
+            <div class="box">
+                <img class = "food-image" src="../images/photos/chicken dinner.jpg" alt="">
+               
+                <h3 class="food-title" id="f85">chicken dinner</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">250birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div>
+            <div class="box">
+                <img class = "food-image" src="../images/photos/tater tots.jpg" alt="">
+       
+                <h3 class="food-title" id="f86">Tator tots/h3>
+                <div class="shop-item-details">
+                    <span class="food-price">230birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/baked beans.jpg" alt="">
+              
+                <h3 class="food-title" id="f87">Baked beans</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">210birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+
+            <div class="box">
+                <img class = "food-image" src="../images/photos/spagett pie.jpg" alt="">
+                
+                <h3 class="food-title" id="f88">Spagetti pie cassrole</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">230birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/wild salmon.jpg" alt="">
+                
+              
+                <h3 class="food-title" id="f89">Wild salmon</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">330birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/grilled cheese.jpg" alt="">
+               
+                <h3 class="food-title" id="f810">grilled cheese sandwich</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">220birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/cornbread.jpg" alt="">
+             
+                <h3 class="food-title" id="f811">Corn bread</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">140birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            
+            <div class="box">
+                <img class = "food-image" src="../images/photos/cheesecake.jpg" alt="">
+              
+                <h3 class="food-title" id="f812">Cheese cake</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">160birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image"  src="../images/photos/pot roast.jpg" alt="">
+     
+                <h3 class="food-title" id="f813">pot roast</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">350birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image"  src="../images/photos/mashed potatos.jpg" alt="">
+
+                <h3 class="food-title" id="f814">Mashed potatos</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">300birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+            <div class="box">
+                <img class = "food-image" src="../images/photos/chicken pot pie.jpg" alt="">
+        
+                <h3 class="food-title" id="f815">chicken potpie</h3>
+                <div class="shop-item-details">
+                    <span class="food-price">240birr</span>
+                    <a class="btn btn-primary  order-now">Add to cart</a>
+                </div> 
+            </div> 
+             
+
+
+
+
+
+
+
+        </div>
+    </div>
+    <div>
+        <summary  id="glow1" ><b>Drinks Menu</b></summary>
+        <div class="pos2">
+         <div class="box">
+            <img class = "food-image" src="../images/photos/bw.jpg" alt="">
+
+            <h3 class="food-title" id="f19">bottled water</h3>
+            <div class="shop-item-details">
+                <span class="food-price">20birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        <div class="box">
+            <img class = "food-image" src="../images/photos/as.jfif" alt="">
+
+           
+            <h3 class="food-title" id="f9">Avocado smoothie</h3>
+            <div class="shop-item-details">
+                <span class="food-price">50birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+
+        <div class="box">
+            <img class = "food-image"src="../images/photos/ms.jpg" alt="">
+         
+            <h3 class="food-title" id="f10">Mango Juice</h3>
+            <div class="shop-item-details">
+                <span class="food-price">70birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+
+        <div class="box">
+            <img class = "food-image" src="../images/photos/oj.jfif" alt="">
+         
+      
+            <h3 class="food-title"id="f11">orange jice</h3>
+            <div class="shop-item-details">
+                <span class="food-price">60birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+
+        <div class="box">
+            <img class = "food-image" src="../images/photos/sj.jpg" alt="">
+        
+            <h3 class="food-title" id="f12">Strawberry juice</h3>
+            <div class="shop-item-details">
+                <span class="food-price">80birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+        
+        <div class="box">
+            <img class = "food-image" src="../images/photos/coca.jpg" alt="">
+         
+            <h3 class="food-title" id="f20">coca cola(500ml)</h3>
+            <div class="shop-item-details">
+                <span class="food-price">50birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div> 
+
+        <div class="box">
+            <img class = "food-image"  src="../images/photos/pepsi.jfif" alt="">
+           
+            <h3 class="food-title" id="f21">pepsi(500ml)</h3>
+            <div class="shop-item-details">
+                <span class="food-price">50birr</span>
+                <a class="btn btn-primary  order-now">Add to cart</a>
+            </div> 
+        </div>
+    </div></div>
+    
+    </div>
+        
+    </div>    
+</section>
+
+ 
+<section class="footer">
+
+    <div class="box-container1">
+
+        <div class="box">
+            <h3>Locations</h3>
+            <b>Megenagna</b>
+            <b>Bole</b>
+            <b>Ambassador</b>
+            <b>4 kilo</b>
+            <b>Gergi</b>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">Home</a>
+            <a href="#">Resturants</a>
+            <a href="#">About</a>
+        </div>
+
+        <div class="box">
+            <h3>Contact info</h3>
+            <a href="#">+251 9 213453</a>
+            <a href="#">+251 9 348679</a>
+            <a href="#">hagereeatsimple@gmail.com</a>
+            <a href="#">eatsimple@gmail.com</a>
+            <a href="#">addis ababa,ethiopia</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+    <div class="credit"> copyright @ 2022 by <span>hagere eat simple platform</span> </div>
+
+</section>
+
+<!-- footer section ends -->
+ 
+<!-- loader part  -->
+
+<div class="container" id="container">
+    <div class="header">
+    <h1 id="signin">Items insde cart</h1>
+        <button class="close" onclick="closeModel()">&times;</button>
+    </div>
+    <hr color="gold" size="4px" style="margin-left: 10%;">
+      
+    <h2 class="section-header">CART</h2>
+    <div class="cart-cont">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>
+    <div class="food-inside-cart">
+    </div>
+    <hr color="gold" size="4px" style="margin-top: 1em; margin-left: 10%; width: 80%;">
+    <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+    </div>
+    <button onclick="openModel1()" class="btn btn-primary btn-purchase" type="button" >PURCHASE</button>
+
+</div>
+    <div>
+        <div class="a" id="overlay" onclick="closeouter()" >
+    </div>
+
+
+
+
+    <div class="containerpay" id="containerpay">  
+        <div class="headerpay">
+
+        <h1 id="paypay">Buy whats inside the cart</h1>
+            <button class="closepay" onclick="closeModel1()">&times;</button>
+
+        </div>
+
+        <a class = "paybank"href="https://www.cbeib.com.et/ARCIB-4/servlet/BrowserServlet">
+        <div class="cbe">
+
+            <img src="../html/photos/cbe.jpg" width ="10%"alt="">
+            <div>pay using CBE</div>
+
+        </div></a>
+        <hr>
+       
+       <a href="https://www.ethiotelecom.et/telebirr/" class ="paybank"> <div class="telebirr">
+        <div class ="cbe">
+            <img src="../../resources/html/photos/telebirr.jpg" width = "10%" alt="">
+            <div>pay with Telebirr</div>
+        </div></div></a> 
+    <hr>
+    
+       <a class = "paybank" href="" id="tkn" onclick="token()"> <div class="cbe">
+        <img src="../html/photos/logo.jpg" width = "10%" alt="">
+           <div>use tokens</div>
+        </div>
+    </a>
+        <hr>       
+</div></div>
+
+
+<div class="a" id="overlay1" onclick="closeouter1()" >
+
+</div>
+
+ 
+    
+<script src="../js/menu/cart1.js"></script> 
+<script src="../js/menu/cart.js"></script>
+<script src="../js/menu/script.js"></script>
+
+<!-- custom js file link  -->
+<script src="../js/menu/scriptmenu.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAGERE EAT SIMPLE ONLINE FOOD ORDERING SYSTEM</title>
+
+     
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/signin.css">
+    <link rel="stylesheet" href="resources/css/signup.css">
+    <link rel="shortcut icon" href="resources/images/logo.png" type="image/x-icon">
+
+</head>
+<body >
+<!-- header section starts      -->
+<div>
+<header id="navigation" >
+  
+
+<a href="index.html" class="logo">  Hagere Eat Simple</a>
+
+    <nav class="navbar">
+        <a class="active" href="index.html">Home</a>
+        <a href="resources/html/br2.html">Browse</a>
+        <a href="resources/html/about us.html" target="_blank">About</a>
+        <a id="not-registered1" onclick="openModel1()">Sign In</a>
+        <a id="not-registered2" onclick="openModel()">Sign up</a>
+    </nav>
+
+     <div class="icons">
+         <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <label for="check">
+        <i class="fas fa-user" id="sidebar_btn" onclick="func()" ></i>
+    </label>
+    </div>
+    
+
+</header>
+<!--profile part-->
+
+<div class="sidebar" id="sidebar">
+ 
+        <h4 id="profile1">Username:  </h4>
+        <h4 id="profile2">Name: </h4>
+        <h4 id="profile3">Email: </h4>
+        <h4 id="profile4">Phone: </h4>
+    </form>
+    <br><br>
+    <details id="details">
+        <summary id="sum">Tokens</summary>
+        <div id="amount">
+        Amount:
+        </div> 
+        Expiration Date: 12/06/2022 <br>
+        <a href="#location">Where to buy tokens.</a>
+    </details>
+    <br><br>
+    <div>
+    <a onclick="logout();"><i class="fas fa-desktop"></i><span>Log Out</span></a>
+    <a href="resources/html/settingsp.html"><i class="fas fa-info-circle"></i><SPan>Settings</SPan></a></div>
+    
+</div> 
+<!--profile end-->
+
+<!-- header section ends-->
+
+<!-- search form  -->
+
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- home section starts  -->
+
+<div class="vids" id="vids"> 
+
+   <video id="background-video" autoplay="true" muted  loop poster="resources/images/adv.jpg">
+       <source src="resources/video/ad.mp4">
+   </video>
+
+</div>
+<div class="section section-light">
+    <a href="#glow">Treanding Resturants</a>
+    <a href="#about">Our Goals</a>
+    <a href="#steptitle">How To Use</a>
+    <a href="#location">Hub Locations</a>
+</div>
+
+<!-- home section ends -->
+
+<!-- dishes section starts  -->
+
+<section class="dishes" id="dishes" >
+
+    <br><br><br><br><br><br>
+    <h2 class="heading" id="glow" >Trending Restaurants</h2>
+    
+
+    <div class="box-container" id="boxContain" >
+
+    </div>
+
+</section>
+
+<!-- dishes section ends -->
+<!--Sign in section starts-->
+            <div class="container1" id="container1">
+                <div class="header1">
+                    <button class="close1" onclick="closeModel1()">&times;</button>
+                </div>
+                <div class="input1">
+                    <form id="form21">
+                        <input type="text" name="username" id="username1" placeholder="Enter Username" required
+                            pattern="^[a-zA-Z0-9_\.]+(@)+(hes.com)">
+                        <input type="password" name="password" id="password1" placeholder="Enter Password" required> <br>
+                        <hr>
+            
+                        <button id="signin11" onclick="validate11();validate21();validate31()">Sign In</button>
+                        <hr>
+                    </form>
+            
+                </div>
+            
+                <div class="text1">
+                    <i>Don't Have an Account? <a onclick="closeModel1(); openModel();">Sign Up</a></i>
+                </div>
+            </div>
+            
+            </div>
+            </div>
+            <div class="a" id="overlay1" onclick="closeouter1()">
+            
+            </div>
+<!--Sign in section ends-->
+
+<!--Sign up section starts-->
+<div class="container" id="container">
+    <div class="header">
+        <h1 id="signin">Sign up</h1>
+        <button class="close" onclick="closeModel()">&times;</button>
+    </div>
+    <div class="input">
+        <form id="form1">
+            <input type="text" name="fname" id="fname" class="inputs" placeholder="First name" required
+                pattern="^[A-Za-z]+$" onchange="change1()"><span><img src="" id="v1" width="20px"></span>
+
+            <input type="text" name="lname" id="lname" class="inputs" placeholder="Last name" required
+                pattern="^[A-Za-z]+$" onchange="change2()"><span><img src="" id="v2" width="20px"></span>
+
+
+            <input type="text" name="username" id="username" placeholder="Username (must end with '@hes.com')" class="inputs" required
+                pattern="^[a-zA-Z0-9_\.]+(@)+(hes.com)" onchange="change3()"><span><img src="" id="v3"
+                    width="20px"></span>
+
+
+            <input type="email" name="email" id="email" placeholder="Email" class="inputs" required
+                pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                onchange="change4()"><span><img src="" id="v4" width="20px"></span>
+
+
+            <input type="tel" name="tel" id="tel" placeholder="Phone Number" class="inputs" required pattern="^\d{10}$"
+                onchange="change5()"><span><img src="" id="v5" width="20px"></span>
+
+
+            <input type="password" name="password" id="password" placeholder="Password 'Atleast capital, one small, one number, eight charcater'" class="inputs" required
+                onchange="change6()"><span><img src="" id="v6" width="20px"></span>
+
+            <input type="password" name="password2" id="password2" placeholder="Confirm Password" class="inputs"
+                required onchange="change7()"><span><img src="" id="v7" width="20px"></span>
+            <div class="agr">
+                <input type="checkbox" value="agree" id="agree" required> I've Read and I Agree Hagere Eat Simple's <a
+                    href="resources/html/privacy_policy.html" target="_blank">Privacy Policies</a> and <a href="resources/html/terms&conditions.html" target="_blank">Terms anc
+                    Conditions.</a>
+            </div>
+            <button id="signin1"
+                onclick="validate1();validate2();validate3();validate4();validate5();validate6();validate7();validate7();validate8();display()">Sign
+                Up</button>
+        </form>
+    </div>
+
+    <hr>
+    <div class="text1">
+        Already Have an Account? <a onclick="closeModel(); openModel1();">Sign In</a></div>
+</div>
+
+</div>
+</div>
+<div class="a" id="overlay" onclick="closeouter()">
+
+</div>
+<!--Sign up section ends-->
+
+
+<!-- about section starts   -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> why choose us? </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="resources/images/about-img.png" alt="food plater">
+        </div>
+
+        <div class="content">
+            <h3>Best online food ordering service in the city</h3>
+            <p>Our platform hagere eat simple is an online food ordering services that values fast,smooth and efficent
+                interactive process with its customers.</p>
+            <p>It is a platform designed to intensify and broaden the on growing food order and delivery sysytem that is
+                being to take root in our city Addis Ababa.</p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>cheap delivery</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>easy payments</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 service</span>
+                </div>
+            </div>
+            <a href="resources/html/about us.html" class="btn">learn more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Instruction section starts  -->
+<div id="section2">
+  <h2 id="steptitle">How to Use?</h2>
+<div id="steps">
+    <div class="step">
+        <div> Choose Your Location</div>
+    </div>
+    <div class="step">
+       <div> Browse Through Restaurants</div> 
+    </div>
+    <div class="step">
+       <div>Browse Through Menu</div> 
+    </div>
+    <div class="step">
+       <div>Add to Cart</div> 
+    </div>
+    <div class="step">
+       <div>Pay Easily</div> 
+    </div>
+</div>
+<a id="bottomstep" href="resources/html/br2.html">Get Started</a>
+<br><br><br><br>
+</div>
+<!-- Instruction section ends  -->
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container1">
+
+        <div class="box" id="location">
+            <h3>Locations</h3>
+            <b>Megenagna</b>
+            <b>Bole</b>
+            <b>Ambassador</b>
+            <b>4 kilo</b>
+            <b>Gergi</b>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">Home</a>
+            <a href="#">Resturants</a>
+            <a href="#">About</a>
+        </div>
+
+        <div class="box">
+            <h3>Contact info</h3>
+            <a href="#">+251 9 213453</a>
+            <a href="#">+251 9 348679</a>
+            <a href="#">hagereeatsimple@gmail.com</a>
+            <a href="#">eatsimple@gmail.com</a>
+            <a href="#">addis ababa,ethiopia</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">twitter</a>
+            <a href="#">instagram</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+    <div class="credit"> copyright @ 2022 by <span>hagere eat simple platform</span> </div>
+
+</section>
+ </div> 
+<!-- footer section ends -->
+<!-- loader part  -->
+<!-- custom js file link  -->
+<script src="resources/js/script.js"></script>
+<script src="resources/js/SignIn.js"></script>
+<script src="resources/js/signup.js"></script>
+<script src="resources/js/settings.js"></script>
+
+</body>
+</html>

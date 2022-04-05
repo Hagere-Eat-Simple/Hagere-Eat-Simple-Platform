@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="shortcut icon" href="../resources/images/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="../css/signin.css">
+</head>
+<body onload="openModel()"> 
+    
+            <div class="container" id="container">
+                <div class="header">
+                <h1 id="signin">Sign In</h1>
+                    <button class="close" onclick="closeModel()">&times;</button>
+                </div>
+                <div class="input">
+                    <form id="form2" >
+                <input type="text" name="username" id="username" placeholder="Enter Username" required pattern="^[a-zA-Z0-9_\.]+(@)+(hes.com)">
+                <input type="password" name="password" id="password" placeholder="Enter Password" required> <br> 
+                <hr>
+               
+                <button id ="signin1"onclick="validate1();validate2();validate3()" >Signin</button>
+                <hr>
+            </form>
+                
+            </div>
+                 
+                 <div class="text">
+                <i>Don't Have an Account? <a href="signup.html">Sign Up</a></i></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="a" id="overlay" onclick="closeouter()" >
+
+    </div>
+  <script src="../js/SignIn.js">
+
+  </script>
+</body>
+</html>
