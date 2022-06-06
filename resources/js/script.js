@@ -1,6 +1,6 @@
 window.onload = function() {
 trendDisplay();
-isregistered();
+//isregistered();
 }
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
@@ -160,7 +160,7 @@ function trendDisplay()
 
   document.getElementById("boxContain").appendChild(c);}
 }
-function isregistered()
+/*function isregistered()
  {
    let check=localStorage.getItem("currentuser");
      if(check==null)
@@ -188,24 +188,15 @@ function isregistered()
       document.getElementById("amount").appendChild(p5);
 
     }
- }
+ }*/
 
 function logout()
 {
-  let conf=confirm("Are You Sure You Want to Log Out?");
-  if(conf==true){
-  localStorage.removeItem("currentuser");
-  location.reload();
-}
-}
-function check2()
-{
-  if(localStorage.getItem("currentuser")==null)
-  {
-    alert("You must be Logged In to access menu");
-    window.open("file:///C:/Users/Gaming%2015/Documents/GitHub/Repostory-1/WebDDPE-Yabsera%20Haile/Project/index.html");
-    /* */
-  }
+//   let conf=confirm("Are You Sure You Want to Log Out?");
+//   if(conf==true){
+//   localStorage.removeItem("currentuser");
+//   location.reload();
+// }
 }
 
 
