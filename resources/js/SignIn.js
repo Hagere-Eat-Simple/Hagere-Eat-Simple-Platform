@@ -1,27 +1,24 @@
-const inf=["Yabsera", "Haile","yy@hes.com","yyy@gamil.com","0987654321","Qwerty1?","2000"];
-localStorage.setItem("user"+0,"yy@hes.com");
-localStorage.setItem("person"+0,JSON.stringify(inf));
 function openModel1(){
-   const model = document.getElementById('container1')
-   const overlay = document.getElementById('overlay1')
+   
+   const model = document.getElementById('hero')
+   const overlay = document.getElementById('overlay2')
      model.classList.add('active')
-     overlay.classList.add('active')
+     overlay.classList.add('active1')
  
 }
 function closeModel1(){
-   const model = document.getElementById('container1')
-   const overlay = document.getElementById('overlay1')
+   const model = document.getElementById('hero')
+   const overlay = document.getElementById('overlay2')
      model.classList.remove('active')
-     overlay.classList.remove('active')
+     overlay.classList.remove('active1')
  
 }
 function closeouter1(){
- const model = document.querySelectorAll('.container.active')
+ const model = document.querySelectorAll('.hero.active')
  model.forEach(model => {
-     closeModel();
+     closeModel1();
  })
 }
-var state1 = true;
 
 function validate11()
 {
