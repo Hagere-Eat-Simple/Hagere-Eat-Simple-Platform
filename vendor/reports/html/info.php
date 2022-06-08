@@ -3,11 +3,7 @@
 <?php require_once "../../config.php";
    session_start();
    include_once ('../login.php');
-   
-if($_SESSION['state']!=1)
-    {
-      header("Location:../index.php");
-    }
+  
    
 ?>
 <html lang="en">
@@ -115,7 +111,7 @@ if($_SESSION['state']!=1)
            $value = $_SESSION['rname'];
 
            $count = 0;
-$sql2 = "SELECT * from orders where resturant='$value' AND state>5";
+$sql2 = "SELECT * from orders where resturant='$value' AND state= -1";
 $result2 = mysqli_query($conn, $sql2);
 if (mysqli_num_rows($result2) > 0) {
   // output data of each row
@@ -125,7 +121,7 @@ if (mysqli_num_rows($result2) > 0) {
   }
 } 
 
-        $connection;
+        
         
          $sql= "SELECT * FROM orders where resturant= '$value' ;";
            $result = $connection->query($sql);
@@ -192,7 +188,14 @@ if (mysqli_num_rows($result2) > 0) {
                       }</script>
                     end_;
             }
-?> 
+?> -->
+        
+       
+         
+         
+       
+      
+      // piechart
     </script>
     <?php
         
@@ -211,6 +214,7 @@ if (mysqli_num_rows($result2) > 0) {
              var data = google.visualization.arrayToDataTable([
                ['Foods', 'Average']
         end_;
+
          if($result){
            while($row = $result->fetch(PDO::FETCH_BOTH)){
                  
@@ -226,7 +230,7 @@ if (mysqli_num_rows($result2) > 0) {
                 if(in_array($foods[$i] , $foods2)){
                    $n = array_search($foods[$i] ,$foods2 );
                   
-                   $amount2[$n] = $amount2[$n]+$amount[$i];
+                   $amount2[$n] = intval($amount2[$n])+intval($amount[$i]);
                  } else{
                     array_push($foods2 , $foods[$i]);
                     array_push($amount2 , $amount[$i]);
@@ -325,8 +329,8 @@ if (mysqli_num_rows($result2) > 0) {
 
     <!--  -->
     
-     <link rel="shortcut icon" href="../../../../resources/images/logo.png" type="image/x-icon">
-        <title>Hagere Hub</title>
+            <link rel="shortcut icon" href="../resources/images/logo.png" type="image/x-icon">
+        <title> HES Reports</title>
 
      
     <!-- font awesome cdn link  -->
@@ -376,9 +380,9 @@ if (mysqli_num_rows($result2) > 0) {
         </ul>
        
 
-        <form class="d-flex" method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>" name="logout">
+        <form class="d-flex" method="POST" action="../../../index.php" name="logout">
          
-          <button class="btn btn-outline-danger ms-4" name="btn">Logout</button>
+          <button class="btn btn-outline-danger ms-4" name="log_out" onclick="confirm('Are you sure you want to logout')">Logout</button>
         </form>
          
       
@@ -421,7 +425,7 @@ if (mysqli_num_rows($result2) > 0) {
                    <thead>
                      <tr>
                        <th>FOOD</th>
-                       <th>Amountt</th>
+                       <th>Amount</th>
                        <th>Price </th>
                        <th>Total</th>
                      </tr>
@@ -566,7 +570,7 @@ if (mysqli_num_rows($result2) > 0) {
                          
                            if(in_array($foods[$i] , $foods2)  ){
                               $n = array_search($foods[$i] ,$foods2 );
-                              $amount2[$n] = $amount2[$n]+$amount[$i];
+                              $amount2[$n] = intval($amount2[$n])+intval($amount[$i]);
                             } else{
                                array_push($foods2 , $foods[$i]);
                                array_push($amount2 , $amount[$i]);
