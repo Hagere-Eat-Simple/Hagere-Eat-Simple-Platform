@@ -97,7 +97,7 @@ if(isset($_POST['create']))
  <span id="profile"><a href="edit_admin.php">Profile</a></span>
 
 <form action="../index.php" method="post">
-    <button id="logout_btn" type="submit" name="logout" onclick="return confirm('Are you sure you want to logout?');">Logout</button>
+    <button id="logout_btn" type="submit" name="log_out" onclick="return confirm('Are you sure you want to logout?');">Logout</button>
 <!--    <a href = "logout.php"
  style = "float: right;margin-right: 5px;background-color: #cdcdcd;
   color: darkred;padding: 10px; border-radius: 5px;text-decoration: none;"

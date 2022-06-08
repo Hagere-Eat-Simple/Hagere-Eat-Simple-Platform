@@ -329,7 +329,7 @@ if (mysqli_num_rows($result2) > 0) {
 
     <!--  -->
     
-            <link rel="shortcut icon" href="../resources/images/logo.png" type="image/x-icon">
+            <link rel="shortcut icon" href="../../../resources/images/logo.png" type="image/x-icon">
         <title> HES Reports</title>
 
      

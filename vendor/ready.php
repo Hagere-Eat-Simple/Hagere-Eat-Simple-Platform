@@ -22,7 +22,6 @@ foreach($results as $x => $x_value) {
 
 if (mysqli_query($conn, $sql)) {
 
-    header('location:orders.php');
 
 } else {
 

@@ -206,7 +206,7 @@ if(isset($_POST['orders']))
         </a>
       </div>
 
-      <div class="feature col">
+      <!-- <div class="feature col">
         <div class="feature-icon bg-primary bg-gradient">
           <img src ="ui.jpg" class="bi" width="55em" height="55em"/>
         </div>
@@ -216,7 +216,7 @@ if(isset($_POST['orders']))
           Perform
         
         </a>
-      </div>
+      </div> -->
 
       
 

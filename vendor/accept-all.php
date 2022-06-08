@@ -15,7 +15,7 @@ require_once "orders.php";
 
 if (mysqli_query($conn, $sql)) {
 
-    header('location:orders.php');
+
 
 } else {
 

@@ -37,6 +37,8 @@ if (mysqli_num_rows($result2) > 0) {
 
   // output data of each row
   //echo "<h1 class='badge bg-primary text-wrap text-center m-3' style='width: 30rem height:30px;'>Breakfast</h1>";
+
+  echo '<button class="w-100 btn btn-success btn-lg m-2" type="submit" name="back" onclick="Redirect()">Back to Home</button>';
   echo "<h1><span class='badge bg-primary'>Breakfast</span></h1>";
  echo "<table class='table table-info table-striped m-8'>";
  echo "<thead>";
@@ -333,7 +335,6 @@ window.location.href = 'http://localhost/project/resources/vendor/home.php';
 
 
 
-<button class="w-100 btn btn-success btn-lg m-2" type="submit" name="back" onclick="Redirect()">Back to Home</button>
 
 
 

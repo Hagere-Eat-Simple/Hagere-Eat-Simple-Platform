@@ -6,7 +6,7 @@ require_once('../config/connect.php');
      $s = $_POST["start"];
      $l = $_POST["limit"];
      $rname=$_SESSION['menu'];
-     $query = "SELECT * FROM menu WHERE(rname='$rname') LIMIT $s,$l";
+     $query = "SELECT * FROM menu WHERE(rname='$rname' AND active=1) LIMIT $s,$l ";
      $sql="SELECT * FROM resturant WHERE Rname='$rname'";
      $r = $conn->query($query);
      $x= $conn->query($sql);

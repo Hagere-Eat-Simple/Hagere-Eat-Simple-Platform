@@ -178,10 +178,6 @@ $i++;
    }
 
    
-  if(isset($_POST['back']))
-  {
-    header('location:home.php');
-  }
 
 
 
@@ -222,13 +218,15 @@ $i++;
 
 <body class="bg-light">
 
-<form method="POST" action="<?php echo $_SERVER["PHP_SELF"];?>">
 
 <button class="w-100 btn btn-success btn-lg m-2" type="submit" name="back" onclick="Redirect()">Back to Home</button>
 
 
-
-
+<script>
+  function Redirect() {
+               window.location = "http://localhost/HES/vendor/home.php";
+            }  
+</script>
 
 </body>
 

@@ -22,9 +22,9 @@
         $search =null;    
     $rname=$_SESSION['menu'];
     if($search)
-        $query = "SELECT * FROM menu WHERE rname='$rname' AND food LIKE '%$search%'";
+        $query = "SELECT * FROM menu WHERE rname='$rname' AND active=1 AND food LIKE '%$search%'";
     else 
-    $query = "SELECT * FROM menu WHERE rname='$rname'";
+    $query = "SELECT * FROM menu WHERE rname='$rname' AND active=1 ";
     $r = $conn->query($query);
     $sql="SELECT * FROM resturant WHERE Rname='$rname'";
     $x= $conn->query($sql);
